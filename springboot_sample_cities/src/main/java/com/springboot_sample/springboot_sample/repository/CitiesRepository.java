@@ -32,9 +32,19 @@ public class CitiesRepository {
     public String update(Integer id, String citiesName){
         try {
             this.cities.set(id, citiesName);
-            return "Country updated";
+            return "Cities updated";
         } catch (Exception exception){
-            return "Country not found";
+            return "Cities not found";
         }
+    }
+
+    public String delete(Integer id){
+        try {
+            this.cities.remove(this.cities.get(id));
+            return "Cities deleted";
+        } catch (Exception exception){
+            return "Cities not found";
+        }
+
     }
 }
