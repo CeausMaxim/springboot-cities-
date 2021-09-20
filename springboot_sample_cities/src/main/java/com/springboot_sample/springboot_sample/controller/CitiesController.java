@@ -12,5 +12,8 @@ public class CitiesController {
         return citiesRepository.create(citiesName);
     }
 
-
+    @GetMapping("cities/{id}")
+    public String read(@PathVariable Integer id){
+        return citiesRepository.read(id);
+    }
 }
